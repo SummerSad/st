@@ -1,3 +1,5 @@
+# Maintainer: SummerSad
+
 pkgname=st
 pkgver=0.8.1
 pkgrel=1
@@ -5,7 +7,7 @@ pkgdesc='A simple terminal implementation for X with patches'
 arch=('x86_64')
 license=('MIT')
 url="https://st.suckless.org/"
-depends=('libxft' 'libxext' 'xorg-fonts-misc')
+depends=('libxft')
 makedepends=('ncurses')
 _patches=(
         "https://st.suckless.org/patches/clipboard/st-clipboard-$pkgver.diff"
@@ -16,8 +18,8 @@ source=("http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz"
         "${_patches[@]}")
 md5sums=('92135aecdba29300bb2e274a55f5b71e'
          'd7295edae3ff61b93e9f875f6eaaad7a'
-         '885aae4cd3e6c09aaa9616ff7a2c472e'
-         'b11fa0335ffe8a86f077677de7b6e13f')
+         'f39726d6394805f9c095bf90f4b45987'
+         '6f8a863906ba8dd84dedd5d322cfd9ec')
 
 prepare() {
   cd $srcdir/$pkgname-$pkgver

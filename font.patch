@@ -1,13 +1,11 @@
-diff --git a/config.def.h b/config.def.h
-index b41747f..48b190a 100644
---- a/config.def.h
-+++ b/config.def.h
+--- a/config.def.h	2018-05-23 19:28:28.731407854 +0700
++++ b/config.def.h	2018-05-23 19:30:17.972769196 +0700
 @@ -5,7 +5,7 @@
   *
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
   */
--static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-+static char font[] = "Iosevka Term:size=12:antialias=true:autohint=false";
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "Iosevka Term:size=12:antialias=true:autohint=false";
  static int borderpx = 2;
  
  /*
