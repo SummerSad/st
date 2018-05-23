@@ -1,5 +1,5 @@
 pkgname=st
-pkgver=0.7
+pkgver=0.8.1
 pkgrel=1
 pkgdesc='A simple terminal implementation for X with patches'
 arch=('x86_64')
@@ -8,22 +8,22 @@ url="https://st.suckless.org/"
 depends=('libxft' 'libxext' 'xorg-fonts-misc')
 makedepends=('ncurses')
 _patches=(
-        "https://st.suckless.org/patches/clipboard/st-clipboard-0.7.diff"
+        "https://st.suckless.org/patches/clipboard/st-clipboard-$pkgver.diff"
         "font.patch"
         "color.patch"
 )
 source=("http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz"
         "${_patches[@]}")
-md5sums=('29b2a599cf1511c8062ed8f025c84c63'
-         '831b8bdc34b48a3290e39ac9aca2906f'
+md5sums=('92135aecdba29300bb2e274a55f5b71e'
+         'd7295edae3ff61b93e9f875f6eaaad7a'
          '885aae4cd3e6c09aaa9616ff7a2c472e'
          'b11fa0335ffe8a86f077677de7b6e13f')
 
 prepare() {
   cd $srcdir/$pkgname-$pkgver
   # skip terminfo which conflicts with nsurses
-  sed -i '/\@tic /d' Makefile
-
+  sed -i '/tic /d' Makefile
+  # patch
   for file in "${_patches[@]}"; do
     if [[ "$file" == *.diff || "$file" == *.patch ]]; then
       echo "Applying patch $(basename $file)..."
