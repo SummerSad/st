@@ -19,3 +19,11 @@ How to make patch
 | Make a patch file ::
 
         diff -u a/origin b/patch > name.patch
+
+How to check PKGBUILD
+=====================
+
+| Use `namcap` ::
+
+        makepkg -fcsi
+        namcap PKGBUILD
