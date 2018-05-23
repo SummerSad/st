@@ -2,6 +2,7 @@
 PKGBUILD for st
 ================
 
-Iosevka font with
-Gruvbox color with
-clipboard patch.
+::
+        font patch (Iosevka Term)
+        color patch (Gruvbox)
+        clipboard patch
