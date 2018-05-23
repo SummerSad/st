@@ -18,6 +18,7 @@ How to make patch
 | Copy file original to `a/`, file patch to `b/`
 | Make a patch file
 
+
 ::
 
         diff -u a/origin b/patch > name.patch
