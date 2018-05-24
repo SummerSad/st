@@ -7,9 +7,9 @@ Patch included
 
 ::
 
-        font patch (Iosevka Term)
-        color patch (Gruvbox)
+        theme patch (Iosevka Term and Gruvbox)
         clipboard patch
+        scrollback with mouse patch
 
 How to make patch
 =================

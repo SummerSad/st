@@ -1,10 +1,18 @@
---- a/config.def.h	2018-05-23 19:40:38.692447847 +0700
-+++ b/config.def.h	2018-05-23 19:43:38.894698380 +0700
-@@ -84,31 +84,24 @@
+--- a/config.def.h	2018-05-24 13:43:50.222233946 +0700
++++ b/config.def.h	2018-05-24 13:46:23.830961792 +0700
+@@ -5,7 +5,7 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "Iosevka Term:size=12:antialias=true:autohint=false";
+ static int borderpx = 2;
  
+ /*
+@@ -85,24 +85,24 @@
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
--	/* 8 normal colors */
+ 	/* 8 normal colors */
 -	"black",
 -	"red3",
 -	"green3",
@@ -13,8 +21,15 @@
 -	"magenta3",
 -	"cyan3",
 -	"gray90",
--
--	/* 8 bright colors */
++	"#282828",
++	"#cc241d",
++	"#98971a",
++	"#d79921",
++	"#458588",
++	"#b16286",
++	"#689d6a",
+ 
+ 	/* 8 bright colors */
 -	"gray50",
 -	"red",
 -	"green",
@@ -23,13 +38,6 @@
 -	"magenta",
 -	"cyan",
 -	"white",
-+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-+	"#cc241d",
-+	"#98971a",
-+	"#d79921",
-+	"#458588",
-+	"#b16286",
-+	"#689d6a",
 +	"#a89984",
 +	"#928374",
 +	"#fb4934",
@@ -41,14 +49,8 @@
 +	"#ebdbb2",
  
  	[255] = 0,
--
--	/* more colors can be added after 255 to use with DefaultXX */
--	"#cccccc",
--	"#555555",
- };
  
- 
-@@ -116,9 +109,9 @@
+@@ -116,9 +116,9 @@
   * Default colors (colorname index)
   * foreground, background, cursor, reverse cursor
   */
