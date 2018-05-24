@@ -7,7 +7,7 @@ Patch included
 
 ::
 
-        theme patch (Iosevka Term and Gruvbox)
+        theme.patch (Iosevka Term and Gruvbox)
         clipboard patch
         scrollback with mouse patch
 
